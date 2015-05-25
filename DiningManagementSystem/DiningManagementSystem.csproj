@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{968ACC0A-CE66-481C-9ED1-BB4000182A2E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiningManagementSystem</RootNamespace>
+    <AssemblyName>DiningManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="com.infy.manager\BLL\BalanceEntryBLL.cs" />
+    <Compile Include="com.infy.manager\BLL\BazarCostEntryBLL.cs" />
+    <Compile Include="com.infy.manager\BLL\LoginBLL.cs" />
+    <Compile Include="com.infy.manager\BLL\MealEntryBLL.cs" />
+    <Compile Include="com.infy.manager\BLL\MemberCodeEntryBLL.cs" />
+    <Compile Include="com.infy.manager\BLL\MemberInformationBLL.cs" />
+    <Compile Include="com.infy.manager\Validator\BalanceEntryValidator.cs" />
+    <Compile Include="com.infy.manager\Validator\BazarCostEntryValidator.cs" />
+    <Compile Include="com.infy.manager\Validator\EditMemberCodeEntryValidator.cs" />
+    <Compile Include="com.infy.manager\Validator\MemberEntryValidator.cs" />
+    <Compile Include="com.infy.persistence\DAO\BalanceEntry.cs" />
+    <Compile Include="com.infy.persistence\DAO\BazarCostEntry.cs" />
+    <Compile Include="com.infy.persistence\DAO\Login.cs" />
+    <Compile Include="com.infy.persistence\DAO\MealEntry.cs" />
+    <Compile Include="com.infy.persistence\DAO\MemberEntry.cs" />
+    <Compile Include="com.infy.persistence\DAO\MemberInformation.cs" />
+    <Compile Include="com.infy.persistence\Gateway\BalanceEntryGateway.cs" />
+    <Compile Include="com.infy.persistence\Gateway\BazarCostEntryGateway.cs" />
+    <Compile Include="com.infy.persistence\Gateway\DBGateway.cs" />
+    <Compile Include="com.infy.persistence\Gateway\LoginGateway.cs" />
+    <Compile Include="com.infy.persistence\Gateway\MealEntryGateway.cs" />
+    <Compile Include="com.infy.persistence\Gateway\MemberCodeEntryGateway.cs" />
+    <Compile Include="com.infy.presentation\UI\AboutUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\AboutUI.Designer.cs">
+      <DependentUpon>AboutUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\BalanceEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\BalanceEntryUI.Designer.cs">
+      <DependentUpon>BalanceEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\BazarCostEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\BazarCostEntryUI.Designer.cs">
+      <DependentUpon>BazarCostEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\BorderMealInfoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\BorderMealInfoUI.Designer.cs">
+      <DependentUpon>BorderMealInfoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\EditLoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\EditLoginUI.Designer.cs">
+      <DependentUpon>EditLoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\EditMemberCodeEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\EditMemberCodeEntryUI.Designer.cs">
+      <DependentUpon>EditMemberCodeEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\MealEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\MealEntryUI.Designer.cs">
+      <DependentUpon>MealEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\MemberCodeEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\MemberCodeEntryUI.Designer.cs">
+      <DependentUpon>MemberCodeEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\PicturalRepresentationUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\PicturalRepresentationUI.Designer.cs">
+      <DependentUpon>PicturalRepresentationUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\WelcomeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="com.infy.presentation\UI\WelcomeUI.Designer.cs">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="com.infy.presentation\UI\AboutUI.resx">
+      <DependentUpon>AboutUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\BalanceEntryUI.resx">
+      <DependentUpon>BalanceEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\BazarCostEntryUI.resx">
+      <DependentUpon>BazarCostEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\BorderMealInfoUI.resx">
+      <DependentUpon>BorderMealInfoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\EditLoginUI.resx">
+      <DependentUpon>EditLoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\EditMemberCodeEntryUI.resx">
+      <DependentUpon>EditMemberCodeEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\MealEntryUI.resx">
+      <DependentUpon>MealEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\MemberCodeEntryUI.resx">
+      <DependentUpon>MemberCodeEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\PicturalRepresentationUI.resx">
+      <DependentUpon>PicturalRepresentationUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="com.infy.presentation\UI\WelcomeUI.resx">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="com.infy.presentation\Images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
